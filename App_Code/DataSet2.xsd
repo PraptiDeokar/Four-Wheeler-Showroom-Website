@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="VehicleDBConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VehicleDBConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.VehicleDBConnectionString1.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="VehicleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VehicleConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.VehicleConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bookCustCarTableAdapter" GeneratorDataComponentClassName="bookCustCarTableAdapter" Name="bookCustCar" UserDataComponentName="bookCustCarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="VehicleConnectionString (Web.config)" DbObjectName="dbo.bookCustCar" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT VehicleId, VehicleModel, VehicleName, Cost, Status, BookDate, Name, ContactNo, Address FROM dbo.bookCustCar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="VehicleId" DataSetColumn="VehicleId" />
+              <Mapping SourceColumn="VehicleModel" DataSetColumn="VehicleModel" />
+              <Mapping SourceColumn="VehicleName" DataSetColumn="VehicleName" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="BookDate" DataSetColumn="BookDate" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="ContactNo" DataSetColumn="ContactNo" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bookCustCar" msprop:Generator_TableClassName="bookCustCarDataTable" msprop:Generator_TableVarName="tablebookCustCar" msprop:Generator_RowChangedName="bookCustCarRowChanged" msprop:Generator_TablePropName="bookCustCar" msprop:Generator_RowDeletingName="bookCustCarRowDeleting" msprop:Generator_RowChangingName="bookCustCarRowChanging" msprop:Generator_RowEvHandlerName="bookCustCarRowChangeEventHandler" msprop:Generator_RowDeletedName="bookCustCarRowDeleted" msprop:Generator_RowClassName="bookCustCarRow" msprop:Generator_UserTableName="bookCustCar" msprop:Generator_RowEvArgName="bookCustCarRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VehicleId" msprop:Generator_ColumnVarNameInTable="columnVehicleId" msprop:Generator_ColumnPropNameInRow="VehicleId" msprop:Generator_ColumnPropNameInTable="VehicleIdColumn" msprop:Generator_UserColumnName="VehicleId" type="xs:int" minOccurs="0" />
+              <xs:element name="VehicleModel" msprop:Generator_ColumnVarNameInTable="columnVehicleModel" msprop:Generator_ColumnPropNameInRow="VehicleModel" msprop:Generator_ColumnPropNameInTable="VehicleModelColumn" msprop:Generator_UserColumnName="VehicleModel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VehicleName" msprop:Generator_ColumnVarNameInTable="columnVehicleName" msprop:Generator_ColumnPropNameInRow="VehicleName" msprop:Generator_ColumnPropNameInTable="VehicleNameColumn" msprop:Generator_UserColumnName="VehicleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BookDate" msprop:Generator_ColumnVarNameInTable="columnBookDate" msprop:Generator_ColumnPropNameInRow="BookDate" msprop:Generator_ColumnPropNameInTable="BookDateColumn" msprop:Generator_UserColumnName="BookDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactNo" msprop:Generator_ColumnVarNameInTable="columnContactNo" msprop:Generator_ColumnPropNameInRow="ContactNo" msprop:Generator_ColumnPropNameInTable="ContactNoColumn" msprop:Generator_UserColumnName="ContactNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
