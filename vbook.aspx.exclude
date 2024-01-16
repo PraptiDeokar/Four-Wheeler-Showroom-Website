@@ -1,0 +1,51 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="vbook.aspx.cs" Inherits="vbook" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div style="margin:auto width:400px">
+
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="VehicleId" 
+        DataSourceID="SqlDataSource1" Height="16px" RepeatColumns="2" Width="679px">
+        <ItemTemplate>
+            VehicleId:
+            <asp:Label ID="VehicleIdLabel" runat="server" Text='<%# Eval("VehicleId") %>' />
+            <br />
+            CompanyName:
+            <asp:Label ID="CompanyNameLabel" runat="server" 
+                Text='<%# Eval("CompanyName") %>' />
+            <br />
+            VehicleName:
+            <asp:Label ID="VehicleNameLabel" runat="server" 
+                Text='<%# Eval("VehicleName") %>' />
+            <br />
+            VehicleModel:
+            <asp:Label ID="VehicleModelLabel" runat="server" 
+                Text='<%# Eval("VehicleModel") %>' />
+            <br />
+            VehicleType:
+            <asp:Label ID="VehicleTypeLabel" runat="server" 
+                Text='<%# Eval("VehicleType") %>' />
+<br />
+            Description:
+            <asp:Label ID="DescriptionLabel" runat="server" 
+                Text='<%# Eval("Description") %>' />
+            <br />
+            Cost:
+            <asp:Label ID="CostLabel" runat="server" Text='<%# Eval("Cost") %>' />
+            <br />
+            VehicleImage:
+            <asp:Image ID="Image1" runat="server" Height="50px" 
+                ImageUrl='<%# Eval("vehicleImage") %>' Width="59px" />
+            <br />
+            <br />
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+        SelectCommand="SELECT [VehicleId], [CompanyName], [VehicleName], [VehicleModel], [VehicleType], [Description], [Cost], [VehicleImage] FROM [VehicleMaster]">
+    </asp:SqlDataSource>
+
+</div>
+</asp:Content>
+

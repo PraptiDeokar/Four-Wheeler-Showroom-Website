@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:Literal ID="Literal1" runat="server" Text="<%$ AppSettings:title%>" /></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    </head>
+<body style=" background-image: url('Images/images (9).jpg')">
+
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="header">
+    <table cellpadding="0" cellspacing="0">
+    <tr>
+    <td valign="top">
+    <img src="Images/Maruti_Old_Logo.JPG" alt="NA" align="top"/>
+    </td>
+    <td valign="top">
+    <h1><asp:Literal ID="Literal2" runat="server" Text="<%$ AppSettings:title %>" /></h1>
+    </td>
+    <td valign="top">
+    <table>
+    <tr>
+    <td><%=DateTime.Now.ToString("dd-MMM-yyyy") %></td>
+    </tr>
+    <tr>
+    <td>
+        <asp:Timer ID="Timer1" runat="server" Interval="1000" ontick="Timer1_Tick">
+        </asp:Timer>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+            </Triggers>
+        </asp:UpdatePanel>
+    </td>
+    </tr>
+    <tr>
+    <td><a href="Login.aspx">Login</a></td>
+    </tr>
+    <tr>
+    <td><a href="NewReg.aspx">Sign Up</a></td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+    </div>
+    <div id="menubar">
+        <asp:Menu ID="Menu1" runat="server" BackColor="#88378A" 
+            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.9em" 
+            ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+            Width="100%" Height="25px">
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#FFFBD6" />
+            <DynamicSelectedStyle BackColor="#FFCC66" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Registration" 
+                    Value="Registration" NavigateUrl="~/NewReg.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Book Vehicle" Value="Book Vehicle" 
+                    NavigateUrl="~/Customer/BookingMaster.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Vehicles" Value="Vehicles" 
+                    NavigateUrl="~/Vehicles.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/DealerInfo.aspx" Text="Dealer Info" 
+                    Value="Dealer Info"></asp:MenuItem>
+                <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About" Value="About" 
+                    NavigateUrl="~/About.aspx"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#FFFF66" ForeColor="Black" Font-Bold="True" 
+                Height="24px" />
+            <StaticMenuItemStyle HorizontalPadding="20px" VerticalPadding="2px" />
+            <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+    </div>
+
+    <div id="contents">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+    &copy;<%=DateTime.Now.Year%> <asp:Literal ID="Literal3" runat="server" Text="<%$ AppSettings:title%>" />, All rights reserved.....
+    </div>
+    </form>
+</body>
+</html>
