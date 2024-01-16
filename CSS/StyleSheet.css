@@ -1,0 +1,103 @@
+﻿html,body
+{
+    font-family: tahoma;
+    font-size: 10pt;
+    padding:0;
+    margin:0;
+    height:100%;
+}
+#page {
+       Min-height: 100%;  /* for all other browsers */
+      height: 100%;  /* for IE */
+      position:relative;
+}
+ 
+#header
+{
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid white; /*background-color:Aqua;*/ /*box-shadow:4px 4px 4px yellow;*/
+    background-color: #9900CC;
+    border-bottom-color: #FFFF00;
+}
+#header table
+{
+    margin:0;
+    padding:0;
+}
+#header img
+{
+    
+    width:140px;
+    height:100px;
+    
+       
+}
+#header h1
+{
+    
+    text-shadow:4px 4px 4px #3399FF;
+    padding-left:50px;
+    margin-top:0px;
+    font-size:40px;
+    padding-right:50px;
+    
+    font:"Book Antiqua"; 
+    color:White;
+    font-variant:small-caps;
+    
+    
+}
+#header table table
+{
+    width:200px;
+    color:White;
+}
+#header table table a
+{
+    text-decoration:none;
+    color:White;
+    font-weight:bold;
+}
+#header table table a:hover
+{
+    font-weight:bold;
+    color:White;
+    text-shadow:4px 4px 4px yellow;
+    text-decoration:underline;
+}
+#menubar
+{
+    clear: both;
+    padding-left: 0;
+    height: 25px;
+    margin: 0;
+    background-color: #8C24B9; /*height:25px;*/
+}
+#contents
+{
+    height:500px;
+    Padding-bottom: 20px;
+}
+
+#contents div table
+{
+    border: medium solid #836AC1;
+    margin-right: 0px;
+}
+#footer
+{
+    position: absolute;
+    width: 100%;
+    bottom: -147px;
+    height: 20px;
+    text-align: center;
+    background-color: #FF00FF;
+    color: #FFFFFF;
+    left: 8px;
+}
+
+.txt
+{
+    border: thin solid #808080;
+    }
